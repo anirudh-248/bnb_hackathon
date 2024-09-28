@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from .models import Item, user_item, Contact
+from .models import user_item, Contact
 
 # Create your views here.
 def index(request):
@@ -89,3 +89,18 @@ def add(request):
         messages.success(request, 'Item added successfully')
         redirect('/wardrobe')
     return render(request, 'add-item.html')
+
+def contact(request):
+    if request.method=='POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        co = Contact.objects.create(
+            name=name,
+            email=email,
+            subject=subject,
+            message=message
+        )
+        return redirect('/')
+    return render(request, 'contact.html')
