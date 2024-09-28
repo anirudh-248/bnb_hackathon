@@ -26,6 +26,7 @@ class user_item(models.Model):
         ('Extra Large', 'XL'),
     )
     banner = models.ImageField(default='fallback.png', blank=True)
+    category=models.CharField(max_length=100, default='category')
     cloth_brand = models.CharField(max_length=100)
     cloth_color = models.CharField(max_length=100)
     cloth_type = models.CharField(max_length=100)

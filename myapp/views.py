@@ -67,3 +67,7 @@ def register(request):
 def wardrobe(request):
     items = user_item.objects.filter(user=request.user)
     return render(request, 'wardrobe.html', {'items': items})
+
+def wardrobe_items(request, name):
+    items = user_item.objects.filter(category=name)
+    return render(request, 'wardrobe_items.html', {'items': items})
