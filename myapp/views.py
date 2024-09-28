@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from .models import Item
+from .models import Item, user_item
 
 # Create your views here.
 def index(request):
@@ -54,5 +54,5 @@ def register(request):
         return render(request, 'register.html')
     
 def wardrobe(request):
-    items = Item.objects.all()
+    items = user_item.objects.filter(user=request.user)
     return render(request, 'wardrobe.html', {'items': items})
