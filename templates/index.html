@@ -56,12 +56,12 @@
           <li><a href="/" class="active">Home</a></li>
           <li><a href="wardrobe">Wardrobe</a></li>
           <li><a href="#contact">Contact</a></li>
-          <a class="btn-getstarted" href="logout">Logout</a>
+          <li><a class="btn-getstarted" href="logout">Logout</a></li>
           {% else %}
           <li><a href="/" class="active">Home</a></li>
           <li><a href="login">Wardrobe</a></li>
           <li><a href="#contact">Contact</a></li>
-          <a class="btn-getstarted" href="login">Login</a>
+          <li><a class="btn-getstarted" href="login">Login</a></li>
           {% endif %}
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -82,11 +82,12 @@
           <div class="carousel-container">
             {% if user.is_authenticated %}
             <h2 class="animate__animated animate__fadeInDown">Welcome, {{user.first_name}}</h2>
-            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+            <p style="font-size:large;">"Your Fashion, Digitized and Personalized!" Step inside your virtual wardrobe and unlock endless outfit possibilities.</p>
+            <p class="animate__animated animate__fadeInUp"></p>
             <a href="wardrobe" class="btn-get-started animate__animated animate__fadeInUp scrollto">Go to Wardrobe</a>
             {% else %}
             <h2 class="animate__animated animate__fadeInDown">Welcome to your Virtual Wardrobe</h2>
-            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+            <p class="animate__animated animate__fadeInUp"></p>
             <a href="login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Go to Wardrobe</a>
             {% endif %}
           </div>
@@ -125,19 +126,16 @@
         <div class="row gy-4">
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
             <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>A fashion-tech company focused on simplifying wardrobe management.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span> We offer a virtual wardrobe platform for organizing, visualizing, and curating outfits.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Our mission is to blend fashion with technology, making style decisions effortless.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Committed to helping you maximize your wardrobe and make sustainable fashion choices.</span></li>
             </ul>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <p>We believe that fashion should be fun, accessible, and sustainable. With our virtual wardrobe, you can mix and match pieces, create outfits for any occasion, and even get recommendations based on your style preferences. Plus, with detailed tracking of your wardrobe usage, you’ll always know what you have and can make mindful decisions about new purchases. </p>
           </div>
 
         </div>
@@ -154,26 +152,20 @@
         <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
-              <i class="bi bi-binoculars"></i>
-              <h4 class="d-none d-lg-block">Modi sit est dela pireda nest</h4>
+              <i class="bi bi-door-open-fill"></i>
+              <h4 class="d-none d-lg-block">Virtual Wardrobe Management</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
-              <i class="bi bi-box-seam"></i>
-              <h4 class="d-none d-lg-block">Unde praesenti mara setra le</h4>
+              <i class="bi bi-person-standing"></i>
+              <h4 class="d-none d-lg-block">Outfit Visualization</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
-              <i class="bi bi-brightness-high"></i>
-              <h4 class="d-none d-lg-block">Pariatur explica nitro dela</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4">
-              <i class="bi bi-command"></i>
-              <h4 class="d-none d-lg-block">Nostrum qui dile node</h4>
+              <i class="bi bi-lightbulb-fill"></i>
+              <h4 class="d-none d-lg-block">Sustainable Fashion Insights</h4>
             </a>
           </li>
         </ul><!-- End Tab Nav -->
@@ -183,22 +175,16 @@
           <div class="tab-pane fade active show" id="features-tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+                <h3>Our Virtual Wardrobe Management system allows users to create a complete digital inventory of their clothing.</h3>
                 <ul>
                   <li><i class="bi bi-check2-all"></i>
-                    <spab>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</spab>
+                    <spab>By uploading photos of individual items, users can easily categorize their wardrobe based on multiple attributes like type, color, season, occasion, or even specific events</spab>
                   </li>
-                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit</span>.</li>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>The platform’s intuitive tagging and filtering features ensure that users can quickly find specific items without the hassle of searching through physical drawers and closets.</span>.</li>
+                  <li><i class="bi bi-check2-all"></i> <span>Whether you're planning a vacation wardrobe or organizing your seasonal clothing, the virtual wardrobe is accessible anytime from any device.</span></li>
                 </ul>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                  Our goal is to simplify and enhance the way people manage their wardrobes, helping them stay organized, save time, and keep their closet in top condition year-round.
                 </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -210,21 +196,16 @@
           <div class="tab-pane fade" id="features-tab-2">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Neque exercitationem debitis soluta quos debitis quo mollitia officia est</h3>
+                <h3>Our Outfit Visualization tool empowers users to mix, match, and plan outfits virtually.</h3>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                  The Outfit Visualization tool also allows users to create style boards and collections, perfect for curating seasonal looks or creating capsule wardrobes. 
+                  It’s more than just an outfit planner—it’s a creative space for users to explore their style, discover new combinations, and express their fashion sense effortlessly.
                 </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+              
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>This feature allows users to be their own stylists, helping them experiment with new combinations without having to try everything on in front of a mirror.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Users can save their favorite outfits for future reference, making it easy to revisit looks they loved.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>The Outfit Visualization tool also allows users to create style boards and collections, perfect for curating seasonal looks or creating capsule wardrobes</span></li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -236,49 +217,19 @@
           <div class="tab-pane fade" id="features-tab-3">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatibus commodi ut accusamus ea repudiandae ut autem dolor ut assumenda</h3>
+                <h3>Empower Your Wardrobe with Sustainable Fashion Insights</h3>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                  Our Sustainable Fashion Insights feature enables you to track clothing usage, discover eco-friendly brands, and repurpose existing items. In helping you make mindful, sustainable fashion choices that reduce waste and promote conscious consumption.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Clothing Usage Tracking helps users track how often they wear each item, reducing unnecessary purchases and minimizing wardrobe waste</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Upcycling and Repurposing Tips offers creative ideas to repurpose or upcycle clothing items, extending their life and promoting sustainability.
+                 </span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Environmental Impact Analytics provides insights on the environmental impact of wardrobe choices, empowering users to make eco-conscious decisions.</span></li>
                 </ul>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="assets/img/working-3.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End Tab Content Item -->
-
-          <div class="tab-pane fade" id="features-tab-4">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Omnis fugiat ea explicabo sunt dolorum asperiores sequi inventore rerum</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/working-4.jpg" alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content Item -->
@@ -289,6 +240,16 @@
 
     </section><!-- /Features Section -->
 
+    <section id="about" class="about section"></section>
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>TIPS</h2>
+        <p>A video on how to organize your wardrobe</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+          <video controls src="static\assets\Tips video\videoplayback.mp4" style="margin-left: 350px;"></video>
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">
 
@@ -338,7 +299,8 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <span>An absolute game-changer for organizing my closet! I love how easy it is to manage my wardrobe with this platform. The virtual closet and outfit planning features save me so much time every morning. Highly recommend!
+                 </span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -354,7 +316,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <span>A stylish, eco-friendly fashion platform.This site has helped me make better fashion choices. I’ve reduced unnecessary shopping and learned how to repurpose clothes I already own. The sustainable insights are eye-opening and incredibly useful for eco-conscious fashionistas.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -370,7 +332,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <span>Perfect for fashion lovers and minimalists alike!  I’ve streamlined my wardrobe thanks to the analytics tool. I can see what I wear most and now focus on quality over quantity. The outfit visualization feature is also a lifesaver for planning outfits quickly.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -386,7 +348,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <span>Great for sustainable fashion enthusiasts.I’m really impressed with how this site promotes sustainability. It tracks how often I wear items and offers great tips on sustainable brands. I feel good about reducing my environmental footprint through mindful fashion choices.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -402,7 +364,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <span>AI-powered outfit suggestions are brilliant.The AI outfit recommendations have completely transformed how I dress. It gives me fresh ideas for styling pieces I already own. I feel like I have a personal stylist at my fingertips every day!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -431,16 +393,13 @@
               <div class="accordion-item">
                 <h2 class="mb-0">
                   <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1">
-                    How to download and register?
+                    How do I upload my wardrobe items?
                   </button>
                 </h2>
 
                 <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-faq">
                   <div class="accordion-body">
-                    Far far away, behind the word mountains, far from the countries
-                    Vokalia and Consonantia, there live the blind texts. Separated
-                    they live in Bookmarksgrove right at the coast of the Semantics,
-                    a large language ocean.
+                    To upload your wardrobe items, simply create an account and navigate to the "My Wardrobe" section. From there, you can easily upload photos of your clothing, tag them with relevant attributes, and categorize them for easy access.
                   </div>
                 </div>
               </div>
@@ -449,17 +408,13 @@
             <div class="accordion-item">
               <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3">
-                  How to link your paypal and bank account?
+                  Are there any subscription fees?
                 </button>
               </h2>
 
               <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
                 <div class="accordion-body">
-                  When she reached the first hills of the Italic Mountains, she
-                  had a last view back on the skyline of her hometown
-                  Bookmarksgrove, the headline of Alphabet Village and the subline
-                  of her own road, the Line Lane. Pityful a rethoric question ran
-                  over her cheek, then she continued her way.
+                  NO! It's absolutely free.
                 </div>
               </div>
             </div>
@@ -487,7 +442,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/team/Anirudh.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -496,8 +451,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Anirudh PS</h4>
+                <span>Member 1</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -505,7 +460,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/team/Akilesh.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -514,8 +469,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Akilesh</h4>
+                <span>Member 2</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -523,7 +478,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/team/Aaryan .jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -532,8 +487,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Aaryan P Shreyas</h4>
+                <span>Member 3</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -541,7 +496,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/team/Benak.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -550,8 +505,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Benak</h4>
+                <span>Member 4</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -646,7 +601,6 @@
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <h3 class="sitename">Virtual Wardrobe</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
