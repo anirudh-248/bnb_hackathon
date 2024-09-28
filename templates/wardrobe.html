@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Virtual Wardrobe</title>
     <!-- Favicons -->
     <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
     <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -21,65 +19,127 @@
     <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-
     <!-- Main CSS File -->
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 </head>
 <body>
-    <header id="header" style="background-color: black;" header d-flex align-items-center fixed-top">
+    <header id="header" style="background-color: black;" header d-flex align-items-center fixed-top>
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-    
             <a href="/" class="logo d-flex align-items-center">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1 class="sitename" style="color: white;">Virtual Wardrobe</h1>
             </a>
-        
             <nav id="navmenu" class="navmenu">
                 <ul>
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="wardrobe">Wardrobe</a></li>
-                <li><a href="#contact">Contact</a></li>
-                {% if user.is_authenticated %}
-                <a class="btn-getstarted" href="logout">Logout</a>
-                {% else %}
-                <a class="btn-getstarted" href="login">Login</a>
-                {% endif %}
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="wardrobe">Wardrobe</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    {% if user.is_authenticated %}
+                    <a class="btn-getstarted" href="login">Logout</a>
+                    {% else %}
+                    <a class="btn-getstarted" href="login">Login</a>
+                    {% endif %}
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-    
         </div>
     </header>
-    {% for item in items %}
-    <div class="card" style="width: 200px; display: inline-block;">
-        <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;" alt="Card image cap">
-        <div class="card-body">
-          <h2 class="card-title">{{item.cloth_brand}}</h5>
-          <h4>Size: {{item.cloth_size}}</h3>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <h4>Categories</h4>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Clothing
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="clothingDropdown">
+                            <li><a class="dropdown-item" href="#">Shirts</a></li>
+                            <li><a class="dropdown-item" href="#">Pants</a></li>
+                            <li><a class="dropdown-item" href="#">Jackets</a></li>
+                            <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                            <li><a class="dropdown-item" href="#">Shorts</a></li>
+    
+                        </ul>
+                    </div>
+                    <div class="dropdown mt-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="accessoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Accessories
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
+                            <li><a class="dropdown-item" href="#">Watches</a></li>
+                            <li><a class="dropdown-item" href="#">Socks</a></li>
+                            <li><a class="dropdown-item" href="#">Wallets</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown mt-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="electronicsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Electronics
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+                            <li><a class="dropdown-item" href="#">Tabs</a></li>
+                            <li><a class="dropdown-item" href="#">Headphones</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown mt-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="jewelleryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Jewellery
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="jewelleryDropdown">
+                            <li><a class="dropdown-item" href="#">Necklaces</a></li>
+                            <li><a class="dropdown-item" href="#">Rings</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown mt-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Books
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+                            <li><a class="dropdown-item" href="#">Fiction</a></li>
+                            <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    {% for item in items %}
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ item.cloth_brand }}</h2>
+                                    <h4>Size: {{ item.cloth_size }}</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
-    {% endfor %}
+    
     <footer id="footer" class="footer dark-background">
         <div class="container">
-          <h3 class="sitename">Virtual Wardrobe</h3>
-          <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-          <div class="social-links d-flex justify-content-center">
-            <a href=""><i class="bi bi-twitter"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-skype"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-          <div class="container">
-            <div class="copyright">
-              <span>Copyright</span> <strong class="px-1 sitename">Virtual Wardrobe</strong> <span>All Rights Reserved</span>
+            <h3 class="sitename">Virtual Wardrobe</h3>
+            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+            <div class="social-links d-flex justify-content-center">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-skype"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
             </div>
-          </div>
+            <div class="container">
+                <div class="copyright">
+                    <span>Copyright</span> <strong class="px-1 sitename">Virtual Wardrobe</strong> <span>All Rights Reserved</span>
+                </div>
+            </div>
         </div>
-      </footer>
+    </footer>
+    
     <!-- Vendor JS Files -->
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
@@ -88,7 +148,7 @@
     <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-
+    
     <!-- Main JS File -->
     <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
