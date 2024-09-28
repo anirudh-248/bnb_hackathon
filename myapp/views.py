@@ -1,10 +1,21 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from .models import Item, user_item
+from .models import Item, user_item, Contact
 
 # Create your views here.
 def index(request):
+    if request.method=='POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        co = Contact.objects.create(
+            name=name,
+            email=email,
+            subject=subject,
+            message=message
+        )
     return render(request, 'index.html')
 
 def login(request):
