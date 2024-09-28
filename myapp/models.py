@@ -27,13 +27,13 @@ class user_item(models.Model):
     )
     banner = models.ImageField(default='fallback.png', blank=True)
     category=models.CharField(max_length=100, default='category')
-    cloth_brand = models.CharField(max_length=100)
-    cloth_color = models.CharField(max_length=100)
-    cloth_type = models.CharField(max_length=100)
-    cloth_size = models.CharField(max_length=100, choices=size_choices)
+    brand = models.CharField(max_length=100)
+    color = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
+    size = models.CharField(max_length=100, choices=size_choices, blank=True)
 
     def __str__(self):
-        return f"{self.cloth_brand} - {self.user.username}"
+        return f"{self.category} - {self.user.username}"
     
 class Contact(models.Model):
     name = models.CharField(max_length=100)
