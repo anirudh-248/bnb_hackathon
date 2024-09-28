@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Item</h1>
+    <form action="add-item" method="POST">
+        {% csrf_token %}
+        <p>Category:</p>
+        <input type="text" name="category" id="category">
+        <p>Brand:</p>
+        <input type="text" name="brand" id="brand">
+        <p>Color:</p>
+        <input type="text" name="color" id="color">
+        <p>Type:</p>
+        <input type="text" name="type" id="type">
+        <p>Size:</p>
+        <input type="text" name="size" id="size">
+        <p>Upload Image</p>
+        <input type="file" name="image" id="image">
+        <br><br>
+        <input type="submit" name="submit" value="Submit">
+        <br><br>
+        <p>To go back to wardrobe, <a href="/wardrobe">click here</a></p>
+    </form>
+</body>
+</html>

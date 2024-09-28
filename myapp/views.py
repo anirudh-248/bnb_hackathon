@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import Item, user_item, Contact
@@ -69,5 +69,34 @@ def wardrobe(request):
     return render(request, 'wardrobe.html', {'items': items})
 
 def wardrobe_items(request, name):
-    items = user_item.objects.filter(category=name)
+    items = user_item.objects.filter(user=request.user).filter(category=name)
     return render(request, 'wardrobe_items.html', {'items': items})
+
+def delete(request,item_id): 
+    item = get_object_or_404(user_item, id=item_id)
+    if request.method=='POST':
+        item.delete() 
+        messages.success(request, 'Item deleted successfully')
+        return redirect('/wardrobe')
+    return redirect('/wardrobe')
+
+def add(request):
+    if request.method=='POST':
+        category = request.POST['category']
+        brand = request.POST['brand']
+        color = request.POST['color']
+        type = request.POST['type']
+        size = request.POST['size']
+        image = request.POST['image']
+        uio = user_item.objects.create(
+            user = request.user,
+            banner=image,
+            category=category,
+            brand=brand,
+            color=color,
+            type=type,
+            size=size
+        )
+        messages.success(request, 'Item added successfully')
+        redirect('/wardrobe')
+    return render(request, 'add-item.html')
