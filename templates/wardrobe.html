@@ -23,7 +23,7 @@
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 </head>
 <body>
-    <header id="header" style="background-color: black;" header d-flex align-items-center fixed-top>
+    <header id="header" style="background-color: black; padding-top: 10px; padding-bottom: 10px;" header d-flex align-items-center fixed-top>
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
             <a href="/" class="logo d-flex align-items-center">
                 <h1 class="sitename" style="color: white;">Virtual Wardrobe</h1>
@@ -90,7 +90,7 @@
                             <li><a class="dropdown-item" href="/wardrobe/Rings">Rings</a></li>
                         </ul>
                     </div>
-                    <div class="dropdown mt-2">
+                    <div class="dropdown mt-2" style="margin-bottom: 10px;">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             Books
                         </button>
@@ -99,11 +99,11 @@
                             <li><a class="dropdown-item" href="/wardrobe/Non-Fiction">Non-Fiction</a></li>
                         </ul>
                     </div>
+                    <a href="/wardrobe/add/add-item" ><button class="add-item">Add Item</button></a>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="row">
-                  <a href="/wardrobe/add/add-item"><button>Add Item</button></a>
                     {% for item in items %}
                         <div class="col-md-4 mb-4">
                             <div class="card">
@@ -114,7 +114,7 @@
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                     <form action="{% url 'delete' item.id %}" method="POST">
                                       {% csrf_token %}
-                                      <button type="submit">Delete</button>
+                                      <button type="submit" class="add-item">Delete</button>
                                     </form>
                                 </div>
                             </div>
@@ -125,10 +125,9 @@
         </div>
     </div>
     
-    <footer id="footer" class="footer dark-background">
+    <footer id="footer" class="footer dark-background" style="padding-bottom: 180px;margin-top: 50px;padding-top: 90px;">
         <div class="container">
             <h3 class="sitename">Virtual Wardrobe</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
             <div class="social-links d-flex justify-content-center">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>

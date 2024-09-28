@@ -147,9 +147,10 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 10px;
   transition: all 0.5s;
   z-index: 997;
+  text-align: center;
 }
 
 .header .logo {
@@ -2557,4 +2558,29 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+.add-item{
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #000000;
+  color: #fff;
+  width: 125px;
+}
+.add-item:hover{
+  background-color: #ef6603;
+  transition: 0.5s;
+}
+
+.delete-button{
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.delete-button:hover{
+  background-color: #ef6603;
+  transition: 0.5s;
+  color: #fff;
 }
