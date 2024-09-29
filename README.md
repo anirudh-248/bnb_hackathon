@@ -7,12 +7,14 @@
 * Committed to helping you maximize your wardrobe and make sustainable fashion choices.
 
 ## How to use our website
-1) Open Command Prompt, navigate to a directory of your choice and create a virtual environment using: ```py -m venv env```
+1) Open Command Prompt, navigate to a directory of your choice and create a virtual environment using:
 
-2) Activate the virtual environment using: ```env\Scripts\activate```
+   ```py -m venv env```
 
-3) Clone the repo using: ```git clone https://github.com/anirudh-248/bnb_hackathon.git```
+3) Activate the virtual environment using: ```env\Scripts\activate```
 
-4) Navigate to the cloned directory and install the requirements using: ```pip install -r requirements.txt```
+4) Clone the repo using: ```git clone https://github.com/anirudh-248/bnb_hackathon.git```
 
-5) To run the website, use: ```py manage.py runserver```
+5) Navigate to the cloned directory and install the requirements using: ```pip install -r requirements.txt```
+
+6) To run the website, use: ```py manage.py runserver```
