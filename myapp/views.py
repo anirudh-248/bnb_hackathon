@@ -76,7 +76,7 @@ def add(request):
         color = request.POST['color']
         type = request.POST['type']
         size = request.POST['size']
-        image = request.POST['image']
+        image = request.FILES.get('image')
         uio = user_item.objects.create(
             user = request.user,
             banner=image,
@@ -86,6 +86,7 @@ def add(request):
             type=type,
             size=size
         )
+        uio.save()
         messages.success(request, 'Item added successfully')
         return redirect('/wardrobe')
     return render(request, 'add-item.html')
