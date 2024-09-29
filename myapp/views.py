@@ -59,7 +59,7 @@ def wardrobe(request):
 
 def wardrobe_items(request, name):
     items = user_item.objects.filter(user=request.user).filter(category=name)
-    return render(request, 'wardrobe_items.html', {'items': items, 'name':name})
+    return render(request, 'wardrobe_items.html', {'items': items, 'name': name})
 
 def delete(request,item_id): 
     item = get_object_or_404(user_item, id=item_id)
