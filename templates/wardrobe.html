@@ -110,8 +110,8 @@
                                 <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;" alt="Card image cap">
                                 <div class="card-body">
                                     <h2 class="card-title">{{ item.brand }}</h2>
-                                    <h4>Category: {{ item.category }}</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5>Category: {{ item.category }}</h5>
+                                    <h5>Type: {{item.type}}</h5>
                                     <form action="{% url 'delete' item.id %}" method="POST">
                                       {% csrf_token %}
                                       <button type="submit" class="add-item">Delete</button>
