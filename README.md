@@ -9,7 +9,7 @@
 ## How to use our website
 1) Open Command Prompt, navigate to a directory of your choice and create a virtual environment using:
 
- ```py -m venv env```
+   ```py -m venv env```
 
 3) Activate the virtual environment using: ```env\Scripts\activate```
 
