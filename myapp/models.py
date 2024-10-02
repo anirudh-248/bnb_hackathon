@@ -6,14 +6,36 @@ from django.contrib.auth.models import User
 class user_item(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     size_choices = (
-        ('Extra Small', 'XS'),
+        ('xsmall', 'XS'),
         ('small', 'S'),
         ('medium', 'M'),
-        ('Large', 'L'),
-        ('Extra Large', 'XL'),
+        ('large', 'L'),
+        ('xlarge', 'XL'),
+        ('xxlarge', 'XXL'),
     )
-    banner = models.ImageField(default='fallback.png', blank=True)
-    category=models.CharField(max_length=100, default='category')
+    category_choices = (
+        ('Shirts', 'Shirts'),
+        ('Pants', 'Pants'),
+        ('Innerwear', 'Innerwear'),
+        ('Jeans', 'Jeans'),
+        ('Jackets', 'Jackets'),
+        ('Socks', 'Socks'),
+        ('Wallets', 'Wallets'),
+        ('Belts', 'Belts'),
+        ('Ties', 'Ties'),
+        ('Kerchiefs', 'Kerchiefs'),
+        ('Tabs', 'Tabs'),
+        ('Headphones', 'Headphones'),
+        ('Cables', 'Cables'),
+        ('Necklaces', 'Necklaces'),
+        ('Rings', 'Rings'),
+        ('Bracelets', 'Bracelets'),
+        ('Fiction', 'Fiction'),
+        ('Non-Fiction', 'Non-Fiction'),
+        ('Biography', 'Biography'),
+    )
+    banner = models.ImageField(default='fallback.png', blank=True, upload_to='uploads/')
+    category = models.CharField(max_length=100, default='category', choices=category_choices)
     brand = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
     type = models.CharField(max_length=100)

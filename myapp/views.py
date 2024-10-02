@@ -65,7 +65,11 @@ def delete(request,item_id):
     item = get_object_or_404(user_item, id=item_id)
     if request.method=='POST':
         item.delete() 
-        return redirect('/wardrobe')
+        previous_page = request.META.get('HTTP_REFERER')
+        if previous_page:
+            return redirect(previous_page)  # Reload the previous page
+        else:
+            return redirect('default-view')
     return redirect('/wardrobe')
 
 def add(request):

@@ -34,9 +34,9 @@
                     <li><a href="wardrobe" class="active">Wardrobe</a></li>
                     <li><a href="/#contact">Contact</a></li>
                     {% if user.is_authenticated %}
-                    <a class="btn-getstarted" href="/logout">Logout</a>
+                    <li><a class="btn-getstarted" href="/logout">Logout</a></li>
                     {% else %}
-                    <a class="btn-getstarted" href="/login">Login</a>
+                    <li><a class="btn-getstarted" href="/login">Login</a></li>
                     {% endif %}
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -54,11 +54,11 @@
                             Clothing
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="clothingDropdown">
-                            <li><a class="dropdown-item" href="wardrobe/Shirts">Shirts</a></li>
-                            <li><a class="dropdown-item" href="wardrobe/Pants">Pants</a></li>
-                            <li><a class="dropdown-item" href="wardrobe/Jackets">Jackets</a></li>
-                            <li><a class="dropdown-item" href="wardrobe/Hoodies">Hoodies</a></li>
-                            <li><a class="dropdown-item" href="wardrobe/Shorts">Shorts</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Shirts">Shirts</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Pants">Pants</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Innerwear">Innerwear</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Jeans">Jeans</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Jackets">Jackets</a></li>
     
                         </ul>
                     </div>
@@ -67,9 +67,11 @@
                             Accessories
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
-                            <li><a class="dropdown-item" href="wardrobe/Watches">Watches</a></li>
-                            <li><a class="dropdown-item" href="wardrobe/Socks">Socks</a></li>
-                            <li><a class="dropdown-item" href="wardrobe/Wallets">Wallets</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Belts">Belts</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Socks">Socks</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Wallets">Wallets</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Ties">Ties</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Kerchiefs">Kerchiefs</a></li>
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
@@ -79,6 +81,7 @@
                         <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
                             <li><a class="dropdown-item" href="/wardrobe/Tabs">Tabs</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Headphones">Headphones</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Cables">Cables</a></li>
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
@@ -88,6 +91,7 @@
                         <ul class="dropdown-menu" aria-labelledby="jewelleryDropdown">
                             <li><a class="dropdown-item" href="/wardrobe/Necklaces">Necklaces</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Rings">Rings</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Bracelets">Bracelets</a></li>
                         </ul>
                     </div>
                     <div class="dropdown mt-2" style="margin-bottom: 10px;">
@@ -97,9 +101,10 @@
                         <ul class="dropdown-menu" aria-labelledby="booksDropdown">
                             <li><a class="dropdown-item" href="/wardrobe/Fiction">Fiction</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Non-Fiction">Non-Fiction</a></li>
+                            <li><a class="dropdown-item" href="/wardrobe/Biography">Biography</a></li>
                         </ul>
                     </div>
-                    <a href="/wardrobe/add/add-item" ><button class="add-item">Add Item</button></a>
+                    <a href="/wardrobe/add/add-item" ><button class="add-item" style="border: none;">Add Item</button></a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -115,7 +120,7 @@
                                         <h5>Type: {{item.type}}</h5>
                                         <form action="{% url 'delete' item.id %}" method="POST">
                                             {% csrf_token %}
-                                            <button type="submit" class="add-item">Delete</button>
+                                            <button type="submit" class="add-item" style="border: none;">Delete</button>
                                         </form>
                                     </div>
                                 </div>

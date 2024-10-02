@@ -1,10 +1,11 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Item</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -12,13 +13,11 @@
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    </head>
-    <body>
-    </head>
-    <body style="background-color: rgb(71, 67, 76);">
-        <div class="container">
-            <div class="row" style="margin-top: 50px;">
-                <div class="col-md-5 mx-auto">
+</head>
+<body style="background-color: rgb(71, 67, 76);">
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-5 mx-auto">
                 <div id="second">
                     <div class="myform form ">
                         <div class="logo mb-3">
@@ -30,7 +29,29 @@
                             {% csrf_token %}
                             <div class="form-group" style="color: white;">
                                 <label for="exampleInputEmail1">Category</label>
-                                <input type="text"  name="category" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Category">
+                                <br>
+                                <select name="category" id="category" style="padding: 8px; border-radius: 5px;">
+                                    <option value="" selected disabled hidden>Select</option>
+                                    <option value="Shirts">Clothing - Shirts</option>
+                                    <option value="Pants">Clothing - Pants</option>
+                                    <option value="Innerwear">Clothing - Innerwear</option>
+                                    <option value="Jeans">Clothing - Jeans</option>
+                                    <option value="Jackets">Clothing - Jackets</option>
+                                    <option value="Socks">Accessories - Socks</option>
+                                    <option value="Wallets">Accessories - Wallets</option>
+                                    <option value="Belts">Accessories - Belts</option>
+                                    <option value="Ties">Accessories - Ties</option>
+                                    <option value="Kerchiefs">Accessories - Kerchiefs</option>
+                                    <option value="Tabs">Electronics - Tabs</option>
+                                    <option value="Headphones">Electronics - Headphones</option>
+                                    <option value="Cables">Electronics - Cables</option>
+                                    <option value="Necklaces">Jewellery - Necklaces</option>
+                                    <option value="Rings">Jewellery - Rings</option>
+                                    <option value="Bracelets">Jewellery - Bracelets</option>
+                                    <option value="Fiction">Books - Fiction</option>
+                                    <option value="Non-Fiction">Books - Non-Fiction</option>
+                                    <option value="Biography">Books - Biography</option>
+                                </select>
                             </div>
                             <div class="form-group" style="color: white;">
                                 <label for="exampleInputEmail1">Brand</label>
@@ -46,21 +67,29 @@
                             </div>
                             <div class="form-group" style="color: white;">
                                 <label for="exampleInputEmail1">Size</label>
-                                <input type="text" name="size" id="password1"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Size">
+                                <br>
+                                <select name="size" id="size" style="padding: 8px; border-radius: 5px;">
+                                    <option value="" selected disabled hidden>Select</option>
+                                    <option value="xsmall">XS</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                    <option value="xlarge">XL</option>
+                                    <option value="xxlarge">XXL</option>
+                                </select>
                             </div>
                             <div class="form-group" style="color: white;"></div>
                                 <label for="exampleInputEmail1" style="color: white;">Image</label>
                                 <input type="file" name="image" id="additem-image"  class="form-control" aria-describedby="emailHelp" placeholder="Upload Image">
                             </div>
-                            <div class="col-md-12 text-center mb-3" style="padding-top: 20px; ">
+                            <div class="col-md-12 text-center mb-3" style="padding-top: 20px; margin-top: 20px;">
                                 <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" style="border-radius: 10px;">Submit</button>
-                            </div>
                             </div>
                         </form>
                     </div>
+                </div>
             </div>
         </div>
-        </div>   
-        
-    </body>
+    </div>
+</body>
 </html>

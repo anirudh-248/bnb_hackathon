@@ -1,6 +1,7 @@
 {% load static %}
+
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Register</title>
@@ -11,11 +12,11 @@
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  </head>
-    <body style="background-color: rgb(71, 67, 76);">
-        <div class="container">
-            <div class="row" style="margin-top: 100px;">
-                <div class="col-md-5 mx-auto">
+</head>
+<body style="background-color: rgb(71, 67, 76);">
+    <div class="container">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-md-5 mx-auto">
                 <div id="second">
                     <div class="myform form ">
                         <div class="logo mb-3">
@@ -23,9 +24,6 @@
                                 <h1 style="color: white;">Sign Up</h1>
                             </div>
                         </div>
-                        {% for msg in messages %}
-                        <h3 style="color: red;">{{msg}}</h3>
-                        {% endfor %}
                         <form action="register" method="POST" name="registration">
                             {% csrf_token %}
                             <div class="form-group" style="color: white;">
@@ -42,7 +40,7 @@
                             </div>
                             <div class="form-group" style="color: white;">
                                 <label for="exampleInputEmail1">Username</label>
-                                <input type="text" name="username"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="text" name="username"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter username">
                             </div>
                             <div class="form-group" style="color: white;">
                                 <label for="exampleInputEmail1">Password</label>
@@ -52,20 +50,19 @@
                                 <label for="exampleInputEmail1">Repeat Password</label>
                                 <input type="password" name="password_r" id="password1"  class="form-control" aria-describedby="emailHelp" placeholder="Repeat Password">
                             </div>
-                            <div class="col-md-12 text-center mb-3">
+                            <div class="col-md-12 text-center mb-3" style="margin-top: 40px;">
                                 <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Sign Up</button>
                             </div>
                             <div class="col-md-12 ">
-                                <div class="form-group" style="color: white;">
-                                <p class="text-center">Already have an account? <a href="login" id="signin"> Login</a></p>
+                                <div class="form-group" style="color: white; margin-top: 20px;">
+                                    <p class="text-center">Already have an account? <a href="login" id="signin"> Login</a></p>
                                 </div>
-                            </div>
                             </div>
                         </form>
                     </div>
+                </div>
             </div>
         </div>
-        </div>   
-        
-    </body>
+    </div>   
+</body>
 </html>
