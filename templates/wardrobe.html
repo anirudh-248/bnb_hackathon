@@ -29,22 +29,15 @@
           <a href="/" class="logo d-flex align-items-center">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1 class="sitename">Virtual Wardrobe</h1>
+            <h1 class="sitename" style="font-family: 'Raleway', sans-serif;">Virtual Wardrobe</h1>
           </a>
     
           <nav id="navmenu" class="navmenu">
             <ul>
-              {% if user.is_authenticated %}
-              <li><a href="index.html">Home</a></li>
-              <li><a href="/" class="active" >Wardrobe</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a class="btn-getstarted" href="logout">Logout</a></li>
-              {% else %}
-              <li><a href="/" class="active">Home</a></li>
-              <li><a href="login">Wardrobe</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a class="btn-getstarted" href="login">Login</a></li>
-              {% endif %}
+              <li><a href="/">Home</a></li>
+              <li><a href="/wardrobe" class="active" >Wardrobe</a></li>
+              <li><a href="/#contact">Contact</a></li>
+              <li><a class="btn-getstarted" href="/logout">Logout</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
@@ -144,7 +137,7 @@
         </div>
     </div>
     
-    <footer id="footer" class="footer dark-background" style="padding-bottom: 180px;margin-top: 50px;padding-top: 90px;">
+    <footer id="footer" class="footer dark-background" style="padding-bottom: 30px; margin-top: 50px; padding-top: 30px;">
         <div class="container">
             <h3 class="sitename">Virtual Wardrobe</h3>
             <div class="social-links d-flex justify-content-center">

@@ -34,17 +34,10 @@
     
           <nav id="navmenu" class="navmenu">
             <ul>
-              {% if user.is_authenticated %}
-              <li><a href="index.html">Home</a></li>
-              <li><a href="/" class="active" >Wardrobe</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a class="btn-getstarted" href="logout">Logout</a></li>
-              {% else %}
-              <li><a href="/" class="active">Home</a></li>
-              <li><a href="login">Wardrobe</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a class="btn-getstarted" href="login">Login</a></li>
-              {% endif %}
+              <li><a href="/">Home</a></li>
+              <li><a href="/wardrobe" class="active" >Wardrobe</a></li>
+              <li><a href="/#contact">Contact</a></li>
+              <li><a class="btn-getstarted" href="/logout">Logout</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
@@ -111,7 +104,7 @@
                             <li><a class="dropdown-item" href="/wardrobe/Biography">Biography</a></li>
                         </ul>
                     </div>
-                    <a href="/wardrobe/add/add-item" ><button class="add-item" style="border: none; background-color: #3e414d;">Add Item</button></a>
+                    <a href="/wardrobe/add/add-item" ><button class="add-item" style="border: none; margin-bottom: 50px;">Add Item</button></a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -127,7 +120,7 @@
                                         <h5>Type: {{item.type}}</h5>
                                         <form action="{% url 'delete' item.id %}" method="POST">
                                             {% csrf_token %}
-                                            <button type="submit" class="add-item" style="border: none; background-color: #3e414d;">Delete</button>
+                                            <button type="submit" class="add-item" style="border: none;">Delete</button>
                                         </form>
                                     </div>
                                 </div>
@@ -143,7 +136,7 @@
         </div>
     </div>
     
-    <footer id="footer" class="footer dark-background" style="padding-bottom: 180px;margin-top: 50px;padding-top: 90px;">
+    <footer id="footer" class="footer dark-background" style="padding-bottom: 30px; margin-top: 50px; padding-top: 30px;">
         <div class="container">
             <h3 class="sitename">Virtual Wardrobe</h3>
             <div class="social-links d-flex justify-content-center">
