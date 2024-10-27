@@ -21,9 +21,33 @@
     <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
     <!-- Main CSS File -->
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1; /* Makes the main content grow and take available space */
+        }
+
+        footer {
+            background-color: #343a40; /* Change as needed */
+            color: white; /* Change as needed */
+        }
+
+    </style>
+
 </head>
 <body>
-    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: rgba(56,58,70,255);">
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: rgba(62,65,77,255); padding-bottom: 12px; padding-top: 12px;">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
     
           <a href="/" class="logo d-flex align-items-center">
@@ -48,10 +72,10 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-3">
-                <div class="sidebar">
+                <div class="sidebar" style="margin-top: 100px;">
                     <h4>Categories</h4>
-                    <div class="dropdown" style="margin-top: 70px;">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Clothing
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="clothingDropdown" style="border-radius: 25px;">
@@ -63,7 +87,7 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="accessoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="accessoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Accessories
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown" style="border-radius: 25px;">
@@ -75,7 +99,7 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="electronicsDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="electronicsDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Electronics
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="electronicsDropdown" style="border-radius: 25px;">
@@ -85,7 +109,7 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="jewelleryDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="jewelleryDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Jewellery
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="jewelleryDropdown" style="border-radius: 25px;">
@@ -95,7 +119,7 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: #3e414d;" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Books
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="booksDropdown" style="border-radius: 25px;">
@@ -104,7 +128,7 @@
                             <li><a class="dropdown-item" href="/wardrobe/Biography">Biography</a></li>
                         </ul>
                     </div>
-                    <a href="/wardrobe/add/add-item" ><button class="add-item" style="border: none; margin-bottom: 50px;">Add Item</button></a>
+                    <a href="/wardrobe/add/add-item" ><button class="add-item" style="border: none; margin-top: 60px;">Add Item</button></a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -112,12 +136,14 @@
                     {% if items %}
                         {% for item in items %}
                             <div class="col-md-4 mb-4">
-                                <div class="card" style="margin-top: 90px;">
+                                <div class="card" style="margin-top: 100px;">
                                     <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;" alt="Card image cap">
                                     <div class="card-body">
                                         <h2 class="card-title">{{ item.brand }}</h2>
                                         <h5>Category: {{ item.category }}</h5>
                                         <h5>Type: {{item.type}}</h5>
+                                        <h5>Color: {{item.color}}</h5>
+                                        <h5>Size: {{item.size}}</h5>
                                         <form action="{% url 'delete' item.id %}" method="POST">
                                             {% csrf_token %}
                                             <button type="submit" class="add-item" style="border: none;">Delete</button>
@@ -126,6 +152,11 @@
                                 </div>
                             </div>
                         {% endfor %}
+                        {% if items|length > 5 %}
+                            <script>
+                                alert("You have too many clothes! Consider donating some.");
+                            </script>
+                        {% endif %}
                     {% else %}
                         <div class="col-md-4 mb-4" style="margin-top: 90px;">
                             <h2>No {{name}} added.</h2>
