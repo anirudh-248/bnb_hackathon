@@ -23,37 +23,45 @@
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 </head>
 <body>
-    <header id="header" style="background-color: black; padding-top: 10px; padding-bottom: 10px;" header d-flex align-items-center fixed-top>
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: rgba(62,65,77,255); padding-bottom: 12px; padding-top: 12px;">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-            <a href="/" class="logo d-flex align-items-center">
-                <h1 class="sitename" style="color: white;">Virtual Wardrobe</h1>
-            </a>
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="wardrobe" class="active">Wardrobe</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                    {% if user.is_authenticated %}
-                    <li><a class="btn-getstarted" href="/logout">Logout</a></li>
-                    {% else %}
-                    <li><a class="btn-getstarted" href="/login">Login</a></li>
-                    {% endif %}
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
+    
+          <a href="/" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">Virtual Wardrobe</h1>
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              {% if user.is_authenticated %}
+              <li><a href="index.html">Home</a></li>
+              <li><a href="/" class="active" >Wardrobe</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a class="btn-getstarted" href="logout">Logout</a></li>
+              {% else %}
+              <li><a href="/" class="active">Home</a></li>
+              <li><a href="login">Wardrobe</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a class="btn-getstarted" href="login">Login</a></li>
+              {% endif %}
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
         </div>
-    </header>
+      </header>
     
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-3">
-                <div class="sidebar">
+                <div class="sidebar" style="margin-top: 100px;">
                     <h4>Categories</h4>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);">
                             Clothing
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="clothingDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="clothingDropdown" style="border-radius: 25px;">
                             <li><a class="dropdown-item" href="/wardrobe/Shirts">Shirts</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Pants">Pants</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Innerwear">Innerwear</a></li>
@@ -63,10 +71,10 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="accessoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="accessoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);">
                             Accessories
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown" style="border-radius: 25px;">
                             <li><a class="dropdown-item" href="/wardrobe/Belts">Belts</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Socks">Socks</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Wallets">Wallets</a></li>
@@ -75,30 +83,30 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="electronicsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="electronicsDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);">
                             Electronics
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="electronicsDropdown" style="border-radius: 25px;">
                             <li><a class="dropdown-item" href="/wardrobe/Tabs">Tabs</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Headphones">Headphones</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Cables">Cables</a></li>
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="jewelleryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="jewelleryDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);">
                             Jewellery
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="jewelleryDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="jewelleryDropdown" style="border-radius: 25px;">
                             <li><a class="dropdown-item" href="/wardrobe/Necklaces">Necklaces</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Rings">Rings</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Bracelets">Bracelets</a></li>
                         </ul>
                     </div>
                     <div class="dropdown mt-2" style="margin-bottom: 10px;">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);">
                             Books
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="booksDropdown" style="border-radius: 25px;">
                             <li><a class="dropdown-item" href="/wardrobe/Fiction">Fiction</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Non-Fiction">Non-Fiction</a></li>
                             <li><a class="dropdown-item" href="/wardrobe/Biography">Biography</a></li>
@@ -112,7 +120,7 @@
                     {% if items %}
                         {% for item in items %}
                             <div class="col-md-4 mb-4">
-                                <div class="card">
+                                <div class="card" style="margin-top: 100px;">
                                     <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;" alt="Card image cap">
                                     <div class="card-body">
                                         <h2 class="card-title">{{ item.brand }}</h2>
@@ -127,7 +135,7 @@
                             </div>
                         {% endfor %}
                     {% else %}
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-4 mb-4" style="margin-top: 100px;">
                             <h2>No items added.</h2>
                         </div>
                     {% endif %}

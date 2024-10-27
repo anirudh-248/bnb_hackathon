@@ -2563,7 +2563,7 @@ section,
   margin-top: 50px;
   padding: 10px;
   border-radius: 50px;
-  background-color: #000000;
+  background-color: #3e414d;
   color: #fff;
   width: 125px;
 }
@@ -2573,7 +2573,7 @@ section,
 }
 
 .delete-button{
-  background-color: #000000;
+  background-color: #3e414d;
   color: white;
   padding: 10px;
   border-radius: 50px;
@@ -2584,5 +2584,13 @@ section,
   transition: 0.5s;
   color: #fff;
 }
+
+.dropdown-button:hover{
+  background-color: #ef6603;
+  transition: 0.5s;
+  color: #fff;
+}
+
+
 
 
