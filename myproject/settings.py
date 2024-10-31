@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-s0$qwyl0=!xj&a4!o5=+x4$72kn7@4h7r%*2a2)z%qw!ix3y4d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.107.56.85']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "myapp"
+    "myapp",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,24 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# AWS S3 settings
+AWS_STORAGE_BUCKET_NAME = 'virtual-wardrobe-s3'
+AWS_S3_REGION_NAME = 'ap-southeast-2'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
+AWS_S3_FILE_OVERWRITE = False
+
+
+# Media files via S3
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+    },
+
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3.S3Storage"
+    }
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
