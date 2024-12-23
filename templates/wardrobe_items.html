@@ -28,6 +28,30 @@
 
     <!-- Main CSS File -->
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1; /* Makes the main content grow and take available space */
+        }
+
+        footer {
+            background-color: #343a40; /* Change as needed */
+            color: white; /* Change as needed */
+        }
+
+    </style>
+
 </head>
 
 <body class="index-page">
@@ -133,14 +157,21 @@
                                         <h2 class="card-title">{{ item.brand }}</h2>
                                         <h5>Category: {{ item.category }}</h5>
                                         <h5>Type: {{item.type}}</h5>
+                                        <h5>Color: {{item.color}}</h5>
+                                        <h5>Size: {{item.size}}</h5>
                                         <form action="{% url 'delete' item.id %}" method="POST">
                                             {% csrf_token %}
-                                            <button type="submit" class="add-item" style="border: none; background-color: #3e414d;">Delete</button>
+                                            <button type="submit" class="add-item" style="border: none;">Delete</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         {% endfor %}
+                        {% if items|length > 3 %}
+                            <script>
+                                alert("You have too many clothes! Consider donating some.");
+                            </script>
+                        {% endif %}
                     {% else %}
                         <div class="col-md-6 mb-4" style="margin-top: 100px;">
                             <h2>No {{name}} added.</h2>
