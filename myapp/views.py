@@ -105,5 +105,5 @@ def contact(request):
             subject=subject,
             message=message
         )
-        return redirect('/')
+        messages.success(request, 'Data has been submitted successfully')
     return render(request, 'contact.html')

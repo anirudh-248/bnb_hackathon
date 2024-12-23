@@ -25,6 +25,9 @@
                                 <h1 style="color:rgb(71, 67, 76)">Contact</h1>
                             </div>
                         </div>
+                        {% for msg in messages %}
+                        <p style="text-align: center; color: green;">{{msg}}, return to <a href="/">main page</a></p>
+                        {% endfor %}
                         <form action="contact" method="POST" name="additem">
                             {% csrf_token %}
                             <div class="form-group" style="color:rgb(71, 67, 76)">
