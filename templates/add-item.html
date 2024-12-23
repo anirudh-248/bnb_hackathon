@@ -19,18 +19,18 @@
         <div class="row" style="margin-top: 50px;">
             <div class="col-md-5 mx-auto">
                 <div id="second">
-                    <div class="myform form ">
+                    <div class="myform form " style=" background-color: white; padding: 30px; border-radius: 15px; margin: 10px -100px 10px -100px;">
                         <div class="logo mb-3">
                             <div class="col-md-12 text-center">
-                                <h1 style="color: white;">Add Item</h1>
+                                <h1 style="color:rgb(71, 67, 76)">Add Item</h1>
                             </div>
                         </div>
                         <form action="add-item" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <div class="form-group" style="color: white;">
+                            <div class="form-group" style="color:rgb(71, 67, 76)">
                                 <label for="exampleInputEmail1">Category</label>
                                 <br>
-                                <select name="category" id="category" style="padding: 8px; border-radius: 5px;">
+                                <select name="category" id="category" style="padding: 8px; border-radius: 5px; width: 100%; border: none;">
                                     <option value="" selected disabled hidden>Select</option>
                                     <option value="Shirts">Clothing - Shirts</option>
                                     <option value="Pants">Clothing - Pants</option>
@@ -53,22 +53,22 @@
                                     <option value="Biography">Books - Biography</option>
                                 </select>
                             </div>
-                            <div class="form-group" style="color: white;">
+                            <div class="form-group" style="color:rgb(71, 67, 76)">
                                 <label for="exampleInputEmail1">Brand</label>
                                 <input type="text"  name="brand" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter Brand">
                             </div>
-                            <div class="form-group" style="color: white;">
+                            <div class="form-group" style="color:rgb(71, 67, 76)">
                                 <label for="exampleInputEmail1">Color</label>
                                 <input type="text" name="color"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Color">
                             </div>
-                            <div class="form-group" style="color: white;">
+                            <div class="form-group" style="color:rgb(71, 67, 76)">
                                 <label for="exampleInputEmail1">Type</label>
                                 <input type="text" name="type" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Type">
                             </div>
-                            <div class="form-group" style="color: white;">
+                            <div class="form-group" style="color:rgb(71, 67, 76)">
                                 <label for="exampleInputEmail1">Size</label>
                                 <br>
-                                <select name="size" id="size" style="padding: 8px; border-radius: 5px;">
+                                <select name="size" id="size" style="padding: 8px; border-radius: 5px; width: 100%; border: none;">
                                     <option value="" selected disabled hidden>Select</option>
                                     <option value="xsmall">XS</option>
                                     <option value="small">S</option>
@@ -78,8 +78,8 @@
                                     <option value="xxlarge">XXL</option>
                                 </select>
                             </div>
-                            <div class="form-group" style="color: white;"></div>
-                                <label for="exampleInputEmail1" style="color: white;">Image</label>
+                            <div class="form-group" style="color:rgb(71, 67, 76)">
+                                <label for="exampleInputEmail1" style="color:rgb(71, 67, 76)">Image</label>
                                 <input type="file" name="image" id="additem-image"  class="form-control" aria-describedby="emailHelp" placeholder="Upload Image">
                             </div>
                             <div class="col-md-12 text-center mb-3" style="padding-top: 20px; margin-top: 20px;">
