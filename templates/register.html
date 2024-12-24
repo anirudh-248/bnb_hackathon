@@ -25,20 +25,21 @@
       crossorigin="anonymous"
     />
     <style>
+      /* Basic container styling */
       .container {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+
       /* For Mobile Devices */
       @media (max-width: 767px) {
         .myform {
           padding: 1rem; /* Compact padding for smaller screens */
           margin: 10px; /* Reduce margins for mobile */
-          height: auto; /* Ensure form height is flexible */
-          max-width: 100%; /* Ensure the form takes full width */
+          width: 100%; /* Ensure the form takes full width */
         }
 
         .logo h1 {
@@ -58,6 +59,10 @@
           padding: 8px 20px; /* Compact button size */
           font-size: 1rem; /* Smaller button text */
         }
+
+        .text-center p {
+          font-size: 0.9rem; /* Smaller text for links */
+        }
       }
 
       /* For Tablets and Larger Devices (Desktops) */
@@ -66,7 +71,6 @@
           padding: 2rem; /* Increased padding for larger screens */
           margin: 20px auto; /* Center the form and add some space */
           max-width: 700px; /* Moderate max width for larger screens */
-          height: auto; /* Ensure the height adapts to content */
         }
 
         .logo h1 {
@@ -90,72 +94,59 @@
     </style>
   </head>
   <body style="background-color: #2c2e3b">
-    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="container">
       <div class="row justify-content-center w-100">
-        <div class="col-10 col-md-6 col-lg-8"> <!-- Increased max width for desktop -->
-          <div id="second">
-            <div
-              class="myform form"
-              style="
-                background-color: white;
-                padding: 2rem; /* Increased padding for larger screens */
-                border-radius: 15px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                max-width: 800px; /* Increased max width */
-                margin: auto;
-              "
-            >
-              <div class="logo mb-2">
-                <h1 class="text-center" style="color: #2c2e3b; font-size: 1.5rem;">Sign Up</h1>
-              </div>
-              {% for msg in messages %}
-              <p class="text-center text-danger" style="font-size: 0.9rem;">{{ msg }}</p>
-              {% endfor %}
-              <form action="register" method="POST" name="registration">
-                {% csrf_token %}
-                <div class="row">
-                  <div class="col-12 col-md-6 mb-2">
-                    <label for="firstname" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">First Name</label>
-                    <input type="text" name="fname" class="form-control" id="firstname" placeholder="Enter Firstname">
-                  </div>
-                  <div class="col-12 col-md-6 mb-2">
-                    <label for="lastname" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Last Name</label>
-                    <input type="text" name="lname" class="form-control" id="lastname" placeholder="Enter Lastname">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-md-6 mb-2">
-                    <label for="email" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Email Address</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
-                  </div>
-                  <div class="col-12 col-md-6 mb-2">
-                    <label for="username" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Username</label>
-                    <input type="text" name="username" class="form-control" id="username" placeholder="Enter username">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-md-6 mb-2">
-                    <label for="password" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Password</label>
-                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
-                  </div>
-                  <div class="col-12 col-md-6 mb-2">
-                    <label for="password1" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Repeat Password</label>
-                    <input type="password" name="password_r" class="form-control" id="password1" placeholder="Repeat Password">
-                  </div>
-                </div>
-                <div class="text-center mb-3 mt-3">
-                  <button type="submit" class="btn btn-primary btn-block" style="background-color: #2c2e3b; border-radius: 25px; padding: 10px 25px; border: none;">
-                    Sign Up
-                  </button>
-                </div>
-                <div class="text-center">
-                  <p style="font-size: 0.9rem;">
-                    Already have an account?
-                    <a href="login" style="color: #2c2e3b;">Login</a>
-                  </p>
-                </div>
-              </form>
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="myform form" style="background-color: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div class="logo mb-2">
+              <h1 class="text-center" style="color: #2c2e3b;">Sign Up</h1>
             </div>
+            {% for msg in messages %}
+            <p class="text-center text-danger" style="font-size: 0.9rem;">{{ msg }}</p>
+            {% endfor %}
+            <form action="register" method="POST" name="registration">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="firstname" class="form-label" style="color: #2c2e3b;">First Name</label>
+                  <input type="text" name="fname" class="form-control" id="firstname" placeholder="Enter Firstname">
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="lastname" class="form-label" style="color: #2c2e3b;">Last Name</label>
+                  <input type="text" name="lname" class="form-control" id="lastname" placeholder="Enter Lastname">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="email" class="form-label" style="color: #2c2e3b;">Email Address</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="username" class="form-label" style="color: #2c2e3b;">Username</label>
+                  <input type="text" name="username" class="form-control" id="username" placeholder="Enter username">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="password" class="form-label" style="color: #2c2e3b;">Password</label>
+                  <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="password1" class="form-label" style="color: #2c2e3b;">Repeat Password</label>
+                  <input type="password" name="password_r" class="form-control" id="password1" placeholder="Repeat Password">
+                </div>
+              </div>
+              <div class="text-center mb-3 mt-3">
+                <button type="submit" class="btn btn-primary btn-block" style="background-color: #2c2e3b; border-radius: 25px; border: none;">
+                  Sign Up
+                </button>
+              </div>
+              <div class="text-center">
+                <p>
+                  Already have an account? <a href="login" style="color: #2c2e3b;">Login</a>
+                </p>
+              </div>
+            </form>
           </div>
         </div>
       </div>
