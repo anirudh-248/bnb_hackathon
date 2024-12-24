@@ -32,139 +32,127 @@
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
       }
+      /* For Mobile Devices */
+      @media (max-width: 767px) {
+        .myform {
+          padding: 1rem; /* Compact padding for smaller screens */
+          margin: 10px; /* Reduce margins for mobile */
+          height: auto; /* Ensure form height is flexible */
+          max-width: 100%; /* Ensure the form takes full width */
+        }
+
+        .logo h1 {
+          font-size: 1.3rem; /* Slightly smaller font for mobile */
+        }
+
+        .form-label {
+          font-size: 0.9rem; /* Smaller font for labels */
+        }
+
+        .form-control {
+          font-size: 0.9rem; /* Smaller input font */
+          padding: 0.5rem; /* Adjust padding for inputs */
+        }
+
+        .btn {
+          padding: 8px 20px; /* Compact button size */
+          font-size: 1rem; /* Smaller button text */
+        }
+      }
+
+      /* For Tablets and Larger Devices (Desktops) */
+      @media (min-width: 768px) {
+        .myform {
+          padding: 2rem; /* Increased padding for larger screens */
+          margin: 20px auto; /* Center the form and add some space */
+          max-width: 700px; /* Moderate max width for larger screens */
+          height: auto; /* Ensure the height adapts to content */
+        }
+
+        .logo h1 {
+          font-size: 1.5rem; /* Larger font for the logo */
+        }
+
+        .form-label {
+          font-size: 1rem; /* Normal font for labels */
+        }
+
+        .form-control {
+          font-size: 1rem; /* Normal input font size */
+          padding: 0.75rem; /* Adjust padding for inputs */
+        }
+
+        .btn {
+          padding: 12px 25px; /* Larger button size */
+          font-size: 1.1rem; /* Normal button text */
+        }
+      }
     </style>
   </head>
   <body style="background-color: #2c2e3b">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 mx-auto">
+    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+      <div class="row justify-content-center w-100">
+        <div class="col-10 col-md-6 col-lg-8"> <!-- Increased max width for desktop -->
           <div id="second">
             <div
               class="myform form"
               style="
                 background-color: white;
-                padding: 30px;
+                padding: 2rem; /* Increased padding for larger screens */
                 border-radius: 15px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                max-width: 800px; /* Increased max width */
+                margin: auto;
               "
             >
-              <div class="logo mb-3">
-                <div class="col-md-12 text-center">
-                  <h1 style="color: #2c2e3b">Sign Up</h1>
-                </div>
+              <div class="logo mb-2">
+                <h1 class="text-center" style="color: #2c2e3b; font-size: 1.5rem;">Sign Up</h1>
               </div>
               {% for msg in messages %}
-              <p style="text-align: center; color: red;">{{msg}}</p>
+              <p class="text-center text-danger" style="font-size: 0.9rem;">{{ msg }}</p>
               {% endfor %}
               <form action="register" method="POST" name="registration">
                 {% csrf_token %}
                 <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group" style="color: #2c2e3b">
-                      <label for="exampleInputEmail1">First Name</label>
-                      <input
-                        type="text"
-                        name="fname"
-                        class="form-control"
-                        id="firstname"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter Firstname"
-                      />
-                    </div>
+                  <div class="col-12 col-md-6 mb-2">
+                    <label for="firstname" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">First Name</label>
+                    <input type="text" name="fname" class="form-control" id="firstname" placeholder="Enter Firstname">
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group" style="color: #2c2e3b">
-                      <label for="exampleInputEmail1">Last Name</label>
-                      <input
-                        type="text"
-                        name="lname"
-                        class="form-control"
-                        id="lastname"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter Lastname"
-                      />
-                    </div>
+                  <div class="col-12 col-md-6 mb-2">
+                    <label for="lastname" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Last Name</label>
+                    <input type="text" name="lname" class="form-control" id="lastname" placeholder="Enter Lastname">
                   </div>
-                </div>
-                <div class="form-group" style="color: #2c2e3b">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    id="email"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div class="form-group" style="color: #2c2e3b">
-                  <label for="exampleInputEmail1">Username</label>
-                  <input
-                    type="text"
-                    name="username"
-                    class="form-control"
-                    id="username"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter username"
-                  />
                 </div>
                 <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group" style="color: #2c2e3b">
-                      <label for="exampleInputEmail1">Password</label>
-                      <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        class="form-control"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter Password"
-                      />
-                    </div>
+                  <div class="col-12 col-md-6 mb-2">
+                    <label for="email" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group" style="color: #2c2e3b">
-                      <label for="exampleInputEmail1">Repeat Password</label>
-                      <input
-                        type="password"
-                        name="password_r"
-                        id="password1"
-                        class="form-control"
-                        aria-describedby="emailHelp"
-                        placeholder="Repeat Password"
-                      />
-                    </div>
+                  <div class="col-12 col-md-6 mb-2">
+                    <label for="username" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Username</label>
+                    <input type="text" name="username" class="form-control" id="username" placeholder="Enter username">
                   </div>
                 </div>
-                <div
-                  class="col-md-12 text-center mb-3"
-                  style="margin-top: 40px"
-                >
-                  <button
-                    type="submit"
-                    class="btn btn-block mybtn btn-primary tx-tfm"
-                    style="
-                      background-color: #2c2e3b;
-                      color: white;
-                      border-radius: 25px;
-                      border: none;
-                    "
-                  >
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-2">
+                    <label for="password" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+                  </div>
+                  <div class="col-12 col-md-6 mb-2">
+                    <label for="password1" class="form-label" style="color: #2c2e3b; font-size: 0.9rem;">Repeat Password</label>
+                    <input type="password" name="password_r" class="form-control" id="password1" placeholder="Repeat Password">
+                  </div>
+                </div>
+                <div class="text-center mb-3 mt-3">
+                  <button type="submit" class="btn btn-primary btn-block" style="background-color: #2c2e3b; border-radius: 25px; padding: 10px 25px; border: none;">
                     Sign Up
                   </button>
                 </div>
-                <div class="col-md-12">
-                  <div class="form-group" style="margin-top: 20px">
-                    <p class="text-center">
-                      Already have an account?
-                      <a
-                        href="login"
-                        id="signin"
-                        style="color: #2c2e3b"
-                      >
-                        Login</a
-                      >
-                    </p>
-                  </div>
+                <div class="text-center">
+                  <p style="font-size: 0.9rem;">
+                    Already have an account?
+                    <a href="login" style="color: #2c2e3b;">Login</a>
+                  </p>
                 </div>
               </form>
             </div>
