@@ -53,7 +53,7 @@
 </head>
 
 <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: rgba(62,65,77,255); padding-bottom: 12px; padding-top: 12px;">
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: rgba(62,65,77,255);">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
     
             <a href="/" class="logo d-flex align-items-center">
@@ -64,17 +64,17 @@
     
             <nav id="navmenu" class="navmenu">
                 <ul>
-                {% if user.is_authenticated %}
-                <li><a href="/">Home</a></li>
-                <li><a href="/wardrobe" class="active" >Wardrobe</a></li>
-                <li><a href="/#contact">Contact</a></li>
-                <li><a class="btn-getstarted" href="logout">Logout</a></li>
-                {% else %}
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="login">Wardrobe</a></li>
-                <li><a href="/#contact">Contact</a></li>
-                <li><a class="btn-getstarted" href="login">Login</a></li>
-                {% endif %}
+                    {% if user.is_authenticated %}
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/wardrobe" class="active" >Wardrobe</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a class="btn-getstarted" href="logout">Logout</a></li>
+                    {% else %}
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="login">Wardrobe</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a class="btn-getstarted" href="login">Login</a></li>
+                    {% endif %}
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -85,7 +85,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-3">
-                <div class="sidebar" style="margin-top: 100px; margin-bottom: 50px;">
+                <div class="sidebar" style="margin-top: 100px;">
                     <h4>Categories</h4>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
@@ -149,7 +149,7 @@
                     {% if items %}
                         {% for item in items %}
                             <div class="col-md-4 mb-4">
-                                <div class="card" style="margin-top: 100px; margin-bottom: 50px;">
+                                <div class="card" style="margin-top: 100px;">
                                     <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;" alt="Card image cap">
                                     <div class="card-body">
                                         <h2 class="card-title">{{ item.brand }}</h2>
@@ -180,7 +180,7 @@
         </div>
     </div>
     
-    <footer id="footer" class="footer dark-background">
+    <footer id="footer" class="footer dark-background" style="margin-top: 50px;">
         <div class="container">
             <h3 class="sitename">Virtual Wardrobe</h3>
             <div class="social-links d-flex justify-content-center">
@@ -192,7 +192,7 @@
             </div>
             <div class="container">
                 <div class="copyright">
-                    <span>Copyright</span> <strong class="px-1 sitename">Virtual Wardrobe</strong> <span>All Rights Reserved</span>
+                    <span>&copy; 2024</span> <strong class="sitename">Virtual Wardrobe</strong> - <span>All Rights Reserved.</span>
                 </div>
             </div>
         </div>
