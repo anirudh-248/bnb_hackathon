@@ -25,70 +25,32 @@
       crossorigin="anonymous"
     />
     <style>
-      /* Basic container styling */
+      /* Ensure the container spans the full viewport height and centers content */
       .container {
         position: relative;
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 15px; /* Add padding for smaller screens */
+        box-sizing: border-box; /* Include padding in width/height calculations */
+      }
+
+      /* Responsive adjustments for the form */
+      .myform {
+        width: 100%; /* Take full width on smaller screens */
+        max-width: 500px; /* Limit width on larger screens */
+        margin: 0 auto; /* Center horizontally */
+        padding: 2rem; /* Adjust padding for readability */
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
       /* For Mobile Devices */
       @media (max-width: 767px) {
         .myform {
-          padding: 1rem; /* Compact padding for smaller screens */
-          margin: 10px; /* Reduce margins for mobile */
-          width: 100%; /* Ensure the form takes full width */
-        }
-
-        .logo h1 {
-          font-size: 1.3rem; /* Slightly smaller font for mobile */
-        }
-
-        .form-label {
-          font-size: 0.9rem; /* Smaller font for labels */
-        }
-
-        .form-control {
-          font-size: 0.9rem; /* Smaller input font */
-          padding: 0.5rem; /* Adjust padding for inputs */
-        }
-
-        .btn {
-          padding: 8px 20px; /* Compact button size */
-          font-size: 1rem; /* Smaller button text */
-        }
-
-        .text-center p {
-          font-size: 0.9rem; /* Smaller text for links */
-        }
-      }
-
-      /* For Tablets and Larger Devices (Desktops) */
-      @media (min-width: 768px) {
-        .myform {
-          padding: 2rem; /* Increased padding for larger screens */
-          margin: 20px auto; /* Center the form and add some space */
-          max-width: 700px; /* Moderate max width for larger screens */
-        }
-
-        .logo h1 {
-          font-size: 1.5rem; /* Larger font for the logo */
-        }
-
-        .form-label {
-          font-size: 1rem; /* Normal font for labels */
-        }
-
-        .form-control {
-          font-size: 1rem; /* Normal input font size */
-          padding: 0.75rem; /* Adjust padding for inputs */
-        }
-
-        .btn {
-          padding: 12px 25px; /* Larger button size */
-          font-size: 1.1rem; /* Normal button text */
+          padding: 1rem; /* Reduce padding on smaller devices */
         }
       }
     </style>
@@ -97,9 +59,9 @@
     <div class="container">
       <div class="row justify-content-center w-100">
         <div class="col-12 col-md-8 col-lg-6">
-          <div class="myform form" style="background-color: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <div class="logo mb-2">
-              <h1 class="text-center" style="color: #2c2e3b;">Sign Up</h1>
+          <div class="myform form">
+            <div class="logo mb-4">
+              <h1 class="text-center" style="color: #2c2e3b; font-size: 1.8rem;">Sign Up</h1>
             </div>
             {% for msg in messages %}
             <p class="text-center text-danger" style="font-size: 0.9rem;">{{ msg }}</p>
