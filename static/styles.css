@@ -1,16 +1,18 @@
-body{
+body {
     padding-top:4.2rem;
     padding-bottom:4.2rem;
     background-color:#000000c2;
-    height: 100vh;
-    }
-    a{
-     text-decoration:none !important;
-     }
-     h1,h2,h3{
-     font-family: 'Kaushan Script', cursive;
-     }
-      .myform{
+}
+
+a {
+    text-decoration:none !important;
+}
+
+h1,h2,h3 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.myform {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -25,32 +27,37 @@ body{
     border-radius: 1.1rem;
     outline: 0;
     max-width: 500px;
-     }
-     .tx-tfm{
-     text-transform:uppercase;
-     }
-     .mybtn{
-     border-radius:50px;
-     }
-    
-     .login-or {
-     position: relative;
-     color: #aaa;
-     margin-top: 10px;
-     margin-bottom: 10px;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     }
+}
 
-      form .error {
-     color: #ff0000;
-     }
-     #second{display:none;}
+.tx-tfm {
+    text-transform:uppercase;
+}
 
-     .form-group1{
-        color: white;
-     }
+.mybtn {
+    border-radius:50px;
+}
 
-     .form-group{
-      color: white;
-     }
+.login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form .error {
+    color: #ff0000;
+}
+
+#second {
+    display:none;
+}
+
+.form-group1 {
+    color: white;
+}
+
+.form-group {
+    color: white;
+}
