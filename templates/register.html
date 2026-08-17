@@ -1,117 +1,119 @@
 {% load static %}
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Register</title>
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="{% static '/static/styles.css' %}" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <style>
-      /* Ensure the container spans the full viewport height and centers content */
-      .container {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px; /* Add padding for smaller screens */
-        box-sizing: border-box; /* Include padding in width/height calculations */
-      }
 
-      /* Responsive adjustments for the form */
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+    id="bootstrap-css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="{% static 'styles.css' %}" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <style>
+    /* Ensure the container spans the full viewport height and centers content */
+    .container {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      /* Add padding for smaller screens */
+      box-sizing: border-box;
+      /* Include padding in width/height calculations */
+    }
+
+    /* Responsive adjustments for the form */
+    .myform {
+      width: 100%;
+      /* Take full width on smaller screens */
+      max-width: 500px;
+      /* Limit width on larger screens */
+      margin: 0 auto;
+      /* Center horizontally */
+      padding: 2rem;
+      /* Adjust padding for readability */
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* For Mobile Devices */
+    @media (max-width: 767px) {
       .myform {
-        width: 100%; /* Take full width on smaller screens */
-        max-width: 500px; /* Limit width on larger screens */
-        margin: 0 auto; /* Center horizontally */
-        padding: 2rem; /* Adjust padding for readability */
-        border-radius: 15px;
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        /* Reduce padding on smaller devices */
       }
+    }
+  </style>
+</head>
 
-      /* For Mobile Devices */
-      @media (max-width: 767px) {
-        .myform {
-          padding: 1rem; /* Reduce padding on smaller devices */
-        }
-      }
-    </style>
-  </head>
-  <body style="background-color: #2c2e3b">
-    <div class="container">
-      <div class="row justify-content-center w-100">
-        <div class="col-12 col-md-8 col-lg-6">
-          <div class="myform form">
-            <div class="logo mb-4">
-              <h1 class="text-center" style="color: #2c2e3b; font-size: 1.8rem;">Sign Up</h1>
-            </div>
-            {% for msg in messages %}
-            <p class="text-center text-danger" style="font-size: 0.9rem;">{{ msg }}</p>
-            {% endfor %}
-            <form action="register" method="POST" name="registration">
-              {% csrf_token %}
-              <div class="row">
-                <div class="col-12 col-md-6 mb-2">
-                  <label for="firstname" class="form-label" style="color: #2c2e3b;">First Name</label>
-                  <input type="text" name="fname" class="form-control" id="firstname" placeholder="Enter Firstname">
-                </div>
-                <div class="col-12 col-md-6 mb-2">
-                  <label for="lastname" class="form-label" style="color: #2c2e3b;">Last Name</label>
-                  <input type="text" name="lname" class="form-control" id="lastname" placeholder="Enter Lastname">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6 mb-2">
-                  <label for="email" class="form-label" style="color: #2c2e3b;">Email Address</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="col-12 col-md-6 mb-2">
-                  <label for="username" class="form-label" style="color: #2c2e3b;">Username</label>
-                  <input type="text" name="username" class="form-control" id="username" placeholder="Enter username">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6 mb-2">
-                  <label for="password" class="form-label" style="color: #2c2e3b;">Password</label>
-                  <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
-                </div>
-                <div class="col-12 col-md-6 mb-2">
-                  <label for="password1" class="form-label" style="color: #2c2e3b;">Repeat Password</label>
-                  <input type="password" name="password_r" class="form-control" id="password1" placeholder="Repeat Password">
-                </div>
-              </div>
-              <div class="text-center mb-3 mt-3">
-                <button type="submit" class="btn btn-primary btn-block" style="background-color: #2c2e3b; border-radius: 25px; border: none;">
-                  Sign Up
-                </button>
-              </div>
-              <div class="text-center">
-                <p>
-                  Already have an account? <a href="login" style="color: #2c2e3b;">Login</a>
-                </p>
-              </div>
-            </form>
+<body style="background-color: #2c2e3b">
+  <div class="container">
+    <div class="row justify-content-center w-100">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="myform form">
+          <div class="logo mb-4">
+            <h1 class="text-center" style="color: #2c2e3b; font-size: 1.8rem;">Sign Up</h1>
           </div>
+          {% for msg in messages %}
+          <p class="text-center text-danger" style="font-size: 0.9rem;">{{ msg }}</p>
+          {% endfor %}
+          <form action="register" method="POST" name="registration">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-12 col-md-6 mb-2">
+                <label for="firstname" class="form-label" style="color: #2c2e3b;">First Name</label>
+                <input type="text" name="fname" class="form-control" id="firstname" placeholder="Enter Firstname">
+              </div>
+              <div class="col-12 col-md-6 mb-2">
+                <label for="lastname" class="form-label" style="color: #2c2e3b;">Last Name</label>
+                <input type="text" name="lname" class="form-control" id="lastname" placeholder="Enter Lastname">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6 mb-2">
+                <label for="email" class="form-label" style="color: #2c2e3b;">Email Address</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="col-12 col-md-6 mb-2">
+                <label for="username" class="form-label" style="color: #2c2e3b;">Username</label>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Enter username">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6 mb-2">
+                <label for="password" class="form-label" style="color: #2c2e3b;">Password</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+              </div>
+              <div class="col-12 col-md-6 mb-2">
+                <label for="password1" class="form-label" style="color: #2c2e3b;">Repeat Password</label>
+                <input type="password" name="password_r" class="form-control" id="password1"
+                  placeholder="Repeat Password">
+              </div>
+            </div>
+            <div class="text-center mb-3 mt-3">
+              <button type="submit" class="btn btn-primary btn-block"
+                style="background-color: #2c2e3b; border-radius: 25px; border: none;">
+                Sign Up
+              </button>
+            </div>
+            <div class="text-center">
+              <p>
+                Already have an account? <a href="login" style="color: #2c2e3b;">Login</a>
+              </p>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -11,7 +12,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -26,7 +29,8 @@
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
     <style>
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
         }
@@ -37,32 +41,36 @@
         }
 
         .container {
-            flex: 1; /* Makes the main content grow and take available space */
+            flex: 1;
+            /* Makes the main content grow and take available space */
         }
 
         footer {
-            background-color: #343a40; /* Change as needed */
-            color: white; /* Change as needed */
+            background-color: #343a40;
+            /* Change as needed */
+            color: white;
+            /* Change as needed */
         }
     </style>
-    
+
 </head>
 
 <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: rgba(62,65,77,255);">
+    <header id="header" class="header d-flex align-items-center fixed-top"
+        style="background-color: rgba(62,65,77,255);">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-    
+
             <a href="/" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1 class="sitename">Virtual Wardrobe</h1>
             </a>
-    
+
             <nav id="navmenu" class="navmenu">
                 <ul>
                     {% if user.is_authenticated %}
                     <li><a href="/">Home</a></li>
-                    <li><a href="/wardrobe" class="active" >Wardrobe</a></li>
+                    <li><a href="/wardrobe" class="active">Wardrobe</a></li>
                     <li><a href="/#contact">Contact</a></li>
                     <li><a class="btn-getstarted" href="/logout">Logout</a></li>
                     {% else %}
@@ -74,17 +82,21 @@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-    
+
         </div>
     </header>
-    
+
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-3">
                 <div class="sidebar" style="margin-top: 100px;">
                     <h4>Categories</h4>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="clothingDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="border-radius: 25px; background-color: rgba(62,65,77,255);"
+                            onmouseover="this.style.backgroundColor='#ef6603';"
+                            onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Clothing
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="clothingDropdown" style="border-radius: 25px;">
@@ -96,7 +108,11 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="accessoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="accessoriesDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="border-radius: 25px; background-color: rgba(62,65,77,255);"
+                            onmouseover="this.style.backgroundColor='#ef6603';"
+                            onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Accessories
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown" style="border-radius: 25px;">
@@ -108,7 +124,11 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="electronicsDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="electronicsDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="border-radius: 25px; background-color: rgba(62,65,77,255);"
+                            onmouseover="this.style.backgroundColor='#ef6603';"
+                            onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Electronics
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="electronicsDropdown" style="border-radius: 25px;">
@@ -118,7 +138,11 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="jewelleryDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="jewelleryDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="border-radius: 25px; background-color: rgba(62,65,77,255);"
+                            onmouseover="this.style.backgroundColor='#ef6603';"
+                            onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Jewellery
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="jewelleryDropdown" style="border-radius: 25px;">
@@ -128,7 +152,11 @@
                         </ul>
                     </div>
                     <div class="dropdown mt-2" style="margin-bottom: 10px;">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px; background-color: rgba(62,65,77,255);" onmouseover="this.style.backgroundColor='#ef6603';" onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="booksDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="border-radius: 25px; background-color: rgba(62,65,77,255);"
+                            onmouseover="this.style.backgroundColor='#ef6603';"
+                            onmouseout="this.style.backgroundColor='rgba(62,65,77,255)';">
                             Books
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="booksDropdown" style="border-radius: 25px;">
@@ -137,45 +165,47 @@
                             <li><a class="dropdown-item" href="/wardrobe/Biography">Biography</a></li>
                         </ul>
                     </div>
-                    <a href="/wardrobe/add/add-item" ><button class="add-item" style="border: none;">Add Item</button></a>
+                    <a href="/wardrobe/add/add-item"><button class="add-item" style="border: none;">Add
+                            Item</button></a>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="row">
                     {% if items %}
-                        {% for item in items %}
-                            <div class="col-md-4 mb-4">
-                                <div class="card" style="margin-top: 100px;">
-                                    <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h2 class="card-title">{{ item.brand }}</h2>
-                                        <h5>Category: {{ item.category }}</h5>
-                                        <h5>Type: {{item.type}}</h5>
-                                        <h5>Color: {{item.color}}</h5>
-                                        <h5>Size: {{item.size}}</h5>
-                                        <form action="{% url 'delete' item.id %}" method="POST">
-                                            {% csrf_token %}
-                                            <button type="submit" class="add-item" style="border: none;">Delete</button>
-                                        </form>
-                                    </div>
-                                </div>
+                    {% for item in items %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="margin-top: 100px;">
+                            <img class="card-img-top" src="{{ item.banner.url }}" style="height: 150px;"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ item.brand }}</h2>
+                                <h5>Category: {{ item.category }}</h5>
+                                <h5>Type: {{item.type}}</h5>
+                                <h5>Color: {{item.color}}</h5>
+                                <h5>Size: {{item.size}}</h5>
+                                <form action="{% url 'delete' item.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" class="add-item" style="border: none;">Delete</button>
+                                </form>
                             </div>
-                        {% endfor %}
-                        {% if items|length > 50 %}
-                            <script>
-                                alert("You have too many clothes! Consider donating some.");
-                            </script>
-                        {% endif %}
-                    {% else %}
-                        <div class="col-md-4 mb-4" style="margin-top: 100px;">
-                            <h2>No items added.</h2>
                         </div>
+                    </div>
+                    {% endfor %}
+                    {% if items|length > 50 %}
+                    <script>
+                        alert("You have too many clothes! Consider donating some.");
+                    </script>
+                    {% endif %}
+                    {% else %}
+                    <div class="col-md-4 mb-4" style="margin-top: 100px;">
+                        <h2>No items added.</h2>
+                    </div>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer id="footer" class="footer dark-background" style="margin-top: 50px;">
         <div class="container">
             <h3 class="sitename">Virtual Wardrobe</h3>
@@ -188,12 +218,13 @@
             </div>
             <div class="container">
                 <div class="copyright">
-                    <span>&copy; 2024</span> <strong class="sitename">Virtual Wardrobe</strong> - <span>All Rights Reserved.</span>
+                    <span>&copy; 2024</span> <strong class="sitename">Virtual Wardrobe</strong> - <span>All Rights
+                        Reserved.</span>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- Vendor JS Files -->
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
@@ -202,8 +233,9 @@
     <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-    
+
     <!-- Main JS File -->
     <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
+
 </html>

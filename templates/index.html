@@ -13,7 +13,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -70,11 +72,13 @@
           <div class="carousel-container">
             {% if user.is_authenticated %}
             <h2 class="animate__animated animate__fadeInDown">Welcome, {{user.first_name}}</h2>
-            <p class="animate__animated animate__fadeInDown" style="font-size:large;">"Your Fashion, Digitized and Personalized!" Step inside your virtual wardrobe and unlock endless outfit possibilities.</p>
+            <p class="animate__animated animate__fadeInDown" style="font-size:large;">"Your Fashion, Digitized and
+              Personalized!" Step inside your virtual wardrobe and unlock endless outfit possibilities.</p>
             <a href="wardrobe" class="btn-get-started animate__animated animate__fadeInUp scrollto">Go to Wardrobe</a>
             {% else %}
             <h2 class="animate__animated animate__fadeInDown">Welcome to your Virtual Wardrobe</h2>
-            <p class="animate__animated animate__fadeInDown" style="font-size:large;">"Your Fashion, Digitized and Personalized!" Step inside your virtual wardrobe and unlock endless outfit possibilities.</p>
+            <p class="animate__animated animate__fadeInDown" style="font-size:large;">"Your Fashion, Digitized and
+              Personalized!" Step inside your virtual wardrobe and unlock endless outfit possibilities.</p>
             <a href="login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
             {% endif %}
           </div>
@@ -82,7 +86,8 @@
 
       </div>
 
-      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28 " preserveAspectRatio="none">
         <defs>
           <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
         </defs>
@@ -114,15 +119,22 @@
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>A fashion-tech company focused on simplifying wardrobe management.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span> We offer a virtual wardrobe platform for organizing, visualizing, and curating outfits.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Our mission is to blend fashion with technology, making style decisions effortless.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Committed to helping you maximize your wardrobe and make sustainable fashion choices.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>A fashion-tech company focused on simplifying wardrobe
+                  management.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span> We offer a virtual wardrobe platform for organizing,
+                  visualizing, and curating outfits.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Our mission is to blend fashion with technology, making
+                  style decisions effortless.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Committed to helping you maximize your wardrobe and make
+                  sustainable fashion choices.</span></li>
             </ul>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>We believe that fashion should be fun, accessible, and sustainable. With our virtual wardrobe, you can mix and match pieces, create outfits for any occasion, and even get recommendations based on your style preferences. Plus, with detailed tracking of your wardrobe usage, you’ll always know what you have and can make mindful decisions about new purchases. </p>
+            <p>We believe that fashion should be fun, accessible, and sustainable. With our virtual wardrobe, you can
+              mix and match pieces, create outfits for any occasion, and even get recommendations based on your style
+              preferences. Plus, with detailed tracking of your wardrobe usage, you’ll always know what you have and can
+              make mindful decisions about new purchases. </p>
           </div>
 
         </div>
@@ -162,16 +174,22 @@
           <div class="tab-pane fade active show" id="features-tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Our Virtual Wardrobe Management system allows users to create a complete digital inventory of their clothing.</h3>
+                <h3>Our Virtual Wardrobe Management system allows users to create a complete digital inventory of their
+                  clothing.</h3>
                 <ul>
                   <li><i class="bi bi-check2-all"></i>
-                    <spab>By uploading photos of individual items, users can easily categorize their wardrobe based on multiple attributes like type, color, season, occasion, or even specific events</spab>
+                    <spab>By uploading photos of individual items, users can easily categorize their wardrobe based on
+                      multiple attributes like type, color, season, occasion, or even specific events</spab>
                   </li>
-                  <li><i class="bi bi-check2-all"></i> <span>The platform's intuitive tagging and filtering features ensure that users can quickly find specific items without the hassle of searching through physical drawers and closets.</span>.</li>
-                  <li><i class="bi bi-check2-all"></i> <span>Whether you're planning a vacation wardrobe or organizing your seasonal clothing, the virtual wardrobe is accessible anytime from any device.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>The platform's intuitive tagging and filtering features
+                      ensure that users can quickly find specific items without the hassle of searching through physical
+                      drawers and closets.</span>.</li>
+                  <li><i class="bi bi-check2-all"></i> <span>Whether you're planning a vacation wardrobe or organizing
+                      your seasonal clothing, the virtual wardrobe is accessible anytime from any device.</span></li>
                 </ul>
                 <p>
-                  Our goal is to simplify and enhance the way people manage their wardrobes, helping them stay organized, save time, and keep their closet in top condition year-round.
+                  Our goal is to simplify and enhance the way people manage their wardrobes, helping them stay
+                  organized, save time, and keep their closet in top condition year-round.
                 </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -185,14 +203,21 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Our Outfit Visualization tool empowers users to mix, match, and plan outfits virtually.</h3>
                 <p>
-                  The Outfit Visualization tool also allows users to create style boards and collections, perfect for curating seasonal looks or creating capsule wardrobes. 
-                  It's more than just an outfit planner—it's a creative space for users to explore their style, discover new combinations, and express their fashion sense effortlessly.
+                  The Outfit Visualization tool also allows users to create style boards and collections, perfect for
+                  curating seasonal looks or creating capsule wardrobes.
+                  It's more than just an outfit planner—it's a creative space for users to explore their style, discover
+                  new combinations, and express their fashion sense effortlessly.
                 </p>
-              
+
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>This feature allows users to be their own stylists, helping them experiment with new combinations without having to try everything on in front of a mirror.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Users can save their favorite outfits for future reference, making it easy to revisit looks they loved.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>The Outfit Visualization tool also allows users to create style boards and collections, perfect for curating seasonal looks or creating capsule wardrobes</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>This feature allows users to be their own stylists, helping
+                      them experiment with new combinations without having to try everything on in front of a
+                      mirror.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Users can save their favorite outfits for future reference,
+                      making it easy to revisit looks they loved.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>The Outfit Visualization tool also allows users to create
+                      style boards and collections, perfect for curating seasonal looks or creating capsule
+                      wardrobes</span></li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -206,13 +231,19 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Empower Your Wardrobe with Sustainable Fashion Insights</h3>
                 <p>
-                  Our Sustainable Fashion Insights feature enables you to track clothing usage, discover eco-friendly brands, and repurpose existing items. In helping you make mindful, sustainable fashion choices that reduce waste and promote conscious consumption.
+                  Our Sustainable Fashion Insights feature enables you to track clothing usage, discover eco-friendly
+                  brands, and repurpose existing items. In helping you make mindful, sustainable fashion choices that
+                  reduce waste and promote conscious consumption.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Clothing Usage Tracking helps users track how often they wear each item, reducing unnecessary purchases and minimizing wardrobe waste</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Upcycling and Repurposing Tips offers creative ideas to repurpose or upcycle clothing items, extending their life and promoting sustainability.
-                 </span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Environmental Impact Analytics provides insights on the environmental impact of wardrobe choices, empowering users to make eco-conscious decisions.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Clothing Usage Tracking helps users track how often they
+                      wear each item, reducing unnecessary purchases and minimizing wardrobe waste</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Upcycling and Repurposing Tips offers creative ideas to
+                      repurpose or upcycle clothing items, extending their life and promoting sustainability.
+                    </span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Environmental Impact Analytics provides insights on the
+                      environmental impact of wardrobe choices, empowering users to make eco-conscious decisions.</span>
+                  </li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -239,7 +270,7 @@
           <source src="{% static 'assets/Tips video/videoplayback.mp4' %}" type="video/mp4">
         </video>
       </center>
-    </div>    
+    </div>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">
@@ -286,12 +317,15 @@
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>An absolute game-changer for organizing my closet! I love how easy it is to manage my wardrobe with this platform. The virtual closet and outfit planning features save me so much time every morning. Highly recommend!
-                 </span>
+                  <span>An absolute game-changer for organizing my closet! I love how easy it is to manage my wardrobe
+                    with this platform. The virtual closet and outfit planning features save me so much time every
+                    morning. Highly recommend!
+                  </span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -303,11 +337,14 @@
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>A stylish, eco-friendly fashion platform.This site has helped me make better fashion choices. I’ve reduced unnecessary shopping and learned how to repurpose clothes I already own. The sustainable insights are eye-opening and incredibly useful for eco-conscious fashionistas.</span>
+                  <span>A stylish, eco-friendly fashion platform.This site has helped me make better fashion choices.
+                    I’ve reduced unnecessary shopping and learned how to repurpose clothes I already own. The
+                    sustainable insights are eye-opening and incredibly useful for eco-conscious fashionistas.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -319,11 +356,14 @@
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Perfect for fashion lovers and minimalists alike!  I’ve streamlined my wardrobe thanks to the analytics tool. I can see what I wear most and now focus on quality over quantity. The outfit visualization feature is also a lifesaver for planning outfits quickly.</span>
+                  <span>Perfect for fashion lovers and minimalists alike! I’ve streamlined my wardrobe thanks to the
+                    analytics tool. I can see what I wear most and now focus on quality over quantity. The outfit
+                    visualization feature is also a lifesaver for planning outfits quickly.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -335,11 +375,14 @@
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Great for sustainable fashion enthusiasts.I'm really impressed with how this site promotes sustainability. It tracks how often I wear items and offers great tips on sustainable brands. I feel good about reducing my environmental footprint through mindful fashion choices.</span>
+                  <span>Great for sustainable fashion enthusiasts.I'm really impressed with how this site promotes
+                    sustainability. It tracks how often I wear items and offers great tips on sustainable brands. I feel
+                    good about reducing my environmental footprint through mindful fashion choices.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -351,11 +394,14 @@
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>AI-powered outfit suggestions are brilliant.The AI outfit recommendations have completely transformed how I dress. It gives me fresh ideas for styling pieces I already own. I feel like I have a personal stylist at my fingertips every day!</span>
+                  <span>AI-powered outfit suggestions are brilliant.The AI outfit recommendations have completely
+                    transformed how I dress. It gives me fresh ideas for styling pieces I already own. I feel like I
+                    have a personal stylist at my fingertips every day!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -390,30 +436,33 @@
 
                 <div id="collapse-faq-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-faq">
                   <div class="accordion-body">
-                    To upload your wardrobe items, simply create an account and navigate to the "My Wardrobe" section. From there, you can easily upload photos of your clothing, tag them with relevant attributes, and categorize them for easy access.
+                    To upload your wardrobe items, simply create an account and navigate to the "My Wardrobe" section.
+                    From there, you can easily upload photos of your clothing, tag them with relevant attributes, and
+                    categorize them for easy access.
                   </div>
                 </div>
               </div>
               <!-- .accordion-item -->
 
-            <div class="accordion-item">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3">
-                  Are there any subscription fees?
-                </button>
-              </h2>
+              <div class="accordion-item">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-faq-3">
+                    Are there any subscription fees?
+                  </button>
+                </h2>
 
-              <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
-                <div class="accordion-body">
-                  NO! It's absolutely free.
+                <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    NO! It's absolutely free.
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- .accordion-item -->
+              <!-- .accordion-item -->
 
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </section><!-- /Faq Section -->
 
@@ -502,11 +551,13 @@
       <div class="container" data-aos="fade" data-aos-delay="100">
 
         <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7778.222542493343!2d77.5176278!3d12.900566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fa7243af9c3%3A0x9bed6669a38d1c3!2sRNS%20INSTITUTE%20OF%20TECHNOLOGY!5e0!3m2!1sen!2sin!4v1726553190142!5m2!1sen!2sin" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe style="border:0; width: 100%; height: 270px;"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7778.222542493343!2d77.5176278!3d12.900566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fa7243af9c3%3A0x9bed6669a38d1c3!2sRNS%20INSTITUTE%20OF%20TECHNOLOGY!5e0!3m2!1sen!2sin!4v1726553190142!5m2!1sen!2sin"
+            frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div><!-- End Google Maps -->
-    
+
         <div class="row gy-4 d-flex justify-content-between">
-    
+
           <div class="col-lg-4 col-md-4">
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
@@ -518,7 +569,7 @@
               </div>
             </div><!-- End Info Item -->
           </div>
-  
+
           <div class="col-lg-4 col-md-4">
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-telephone flex-shrink-0"></i>
@@ -528,7 +579,7 @@
               </div>
             </div><!-- End Info Item -->
           </div>
-  
+
           <div class="col-lg-4 col-md-4">
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope flex-shrink-0"></i>
@@ -538,14 +589,15 @@
               </div>
             </div><!-- End Info Item -->
           </div>
-    
+
         </div><!-- End Row -->
-    
+
         <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-          <a href="/contact"><button class="add-item" style="width: 200px; border: none; transition: 0.5s; margin-top: 25px;">Send Message</button></a>
+          <a href="/contact"><button class="add-item"
+              style="width: 200px; border: none; transition: 0.5s; margin-top: 25px;">Send Message</button></a>
         </div>
-    
-      </div>    
+
+      </div>
 
     </section><!-- /Contact Section -->
 
@@ -563,14 +615,16 @@
       </div>
       <div class="container">
         <div class="copyright">
-          <span>&copy; 2024</span> <strong class="sitename">Virtual Wardrobe</strong> - <span>All Rights Reserved.</span>
+          <span>&copy; 2024</span> <strong class="sitename">Virtual Wardrobe</strong> - <span>All Rights
+            Reserved.</span>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
